@@ -4,7 +4,7 @@ from django.http import HttpResponse
 # Create your views here.
 
 def home(request):
-    return HttpResponse("Bonjour tous le monde")
+    return render(request,"app/index.html" )
 
 def register(request):
     return render(request, "app/register.html")
