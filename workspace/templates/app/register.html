@@ -1,4 +1,34 @@
 {% extends "base.html" %}
 {% block content %}
+<h4>Enregistrer Ici</h4>
 
+<form action="/register" method="post">
+    {% csrf_token %}
+           <!--  nom de user -->
+    <label for="username">Username</label>
+    <input type="text" name="username" id="username" placeholder="username">
+    <br><br>
+        <!--  prenom de user-->
+    <label for="nom">Nom</label>
+    <input type="text" name="nom" id="nom"  placeholder="nom">
+    <br><br>
+       <!--  prenom -->
+    <label for="prenom">Prenom</label>
+    <input type="text" name="prenom" id="prenom" placeholder="prenom">
+    <br><br>
+    <!-- addresse Email -->
+    <label for="email">Email</label>
+    <input type="email" name="email" id="email" placeholder="email">
+    <br><br>
+    <!-- mot de passe -->
+    <label for="passwork">Passwork</label>
+    <input type="password" name="password" id="password" placeholder="password">
+    <br><br>
+        <!-- confirmation de mot de passe -->
+    <label for="passworkl">Confirmation passwork</label>
+    <input type="password" name="passwordl" id="passwordl" placeholder="confirmation passwork">
+    <br><br>
+
+    <button type="button">Enregistrer</button>
+</form>
 {% endblock %}
